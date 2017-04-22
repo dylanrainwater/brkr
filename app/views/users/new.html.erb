@@ -18,7 +18,7 @@
       <%= f.label :password_confirmation, "Confirm password" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.submit "Join the Sample App", class: "btn btn-primary" %>
+      <%= f.submit "Join #{ Rails.application.config.TITLE }", class: "btn btn-primary" %>
 
     <% end %>
   </div>

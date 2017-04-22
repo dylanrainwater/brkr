@@ -1,6 +1,4 @@
-# Ruby on Rails Tutorial sample application
-
-sample\_app from [railstutorial.org](http://www.railstutorial.org/)
+# Barker
 
 ## License
 
@@ -38,4 +36,3 @@ $ rails server
 * Ruby 2.3.3
 
 * Rails 5.0.2
-
