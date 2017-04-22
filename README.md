@@ -38,3 +38,19 @@ $ rails server
 * Ruby 2.3.3
 
 * Rails 5.0.2
+
+## TODO
+
+* Implement cookie login
+
+* Flesh out Users
+
+* Account activation
+
+* Reset passwords
+
+* Barks
+
+* Follow
+
+* Feed
