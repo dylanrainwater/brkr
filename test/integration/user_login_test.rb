@@ -38,5 +38,7 @@ class UserLoginTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", logout_path
     # Verify that a profile link is also there
     assert_select "a[href=?]", user_path(@user)
+    # Verify user is logged in
+    assert is_logged_in?
   end
 end
