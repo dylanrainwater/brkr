@@ -44,6 +44,9 @@ class UserLoginTest < ActionDispatch::IntegrationTest
     delete logout_path
     assert_not is_logged_in?
     assert_redirected_to root_url
+
+    # log out, again (another browser or session)
+    delete logout_path
     follow_redirect!
 
     # Verify that the login link is back
