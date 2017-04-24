@@ -45,6 +45,7 @@ class UsersController < ApplicationController
     if @user.save
       @user.update_attribute(:bio, "#{@user.name} hasn't made a bio yet!")
       log_in @user
+      remember @user
       flash[:success] = "Welcome to #{ Rails.application.config.TITLE }!"
       redirect_to @user
     else
