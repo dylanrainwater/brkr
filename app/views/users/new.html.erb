@@ -19,7 +19,8 @@
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
       <%= f.submit "Join #{ Rails.application.config.TITLE }", class: "btn btn-primary" %>
-
     <% end %>
+
+    <p> <em>Pssst</em>, already a brkr? <%= link_to 'Click here!', login_path %> </p>
   </div>
 </div>
