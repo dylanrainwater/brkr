@@ -9,9 +9,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
 
+    @user = User.new(user_params)
     if @user.save
+      @user.update_attribute(:bio, "#{@user.name} hasn't made a bio yet!")
       log_in @user
       flash[:success] = "Welcome to #{ Rails.application.config.TITLE }!"
       redirect_to @user
@@ -23,6 +24,6 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                    :password_confirmation)
+                                    :password_confirmation, :bio)
     end
 end

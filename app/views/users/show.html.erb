@@ -7,7 +7,25 @@
           <%= gravatar_for @user %>
           <%= @user.name %><br>
           <small>Image retrieved from <a href="https://www.gravatar.com">gravatar</a>
-          </small>
+          </small> <br>
+
+      </h1>
+    </section>
+  </aside>
+
+  <aside class="col-md-7 bio">
+
+      <blockquote class="blockquote">
+        <p><%= @user.bio %></p>
+        <footer><%= @user.name %> </footer>
+      </blockquote>
+
+  </aside>
+
+  <aside class="col-md-1">
+    <section>
+      <h1>
+        <small><a class="btn btn-primary btn-sm" href="#">Edit Profile</a>
       </h1>
     </section>
   </aside>

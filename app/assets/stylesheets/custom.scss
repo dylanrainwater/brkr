@@ -15,6 +15,7 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
+  background-color: #EEE;
 }
 
 section {
@@ -114,6 +115,10 @@ footer {
 aside {
   section.user_info {
     margin-top: 20px;
+  }
+
+  blockquote {
+    background-color: white;
   }
 
   section {
