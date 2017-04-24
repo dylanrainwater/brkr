@@ -25,7 +25,10 @@
     <aside class="col-md-1">
       <section>
         <h1>
-          <small><a class="btn btn-primary btn-sm" href="#">Edit Profile</a>
+
+            <%= link_to "Edit Profile", edit_user_path(current_user),
+                                    class: "btn btn-primary btn-sm" %>
+
         </h1>
       </section>
     </aside>
