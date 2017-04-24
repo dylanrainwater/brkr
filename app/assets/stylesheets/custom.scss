@@ -156,6 +156,22 @@ aside {
 .gravatar_edit {
   margin-top: 15px;
 }
+/* users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+
+  li.odd {
+    background-color: #DDD;
+  }
+
+  li {
+    overflow: auto;
+    padding: 10px 5px;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
 
 /* forms */
 

@@ -1,25 +1,16 @@
-<% provide(:title, 'Sign Up') %>
-<h1>Sign Up</h1>
+<% plural_title = Rails.application.config.TITLE +  's' %>
+<% provide(:title, plural_title) %>
+<h1>Fellow <%= plural_title %> </h1>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages' %>
+<%= will_paginate %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
+<ul class="users">
+  <% @users.each_with_index do |user, index| %>
+    <li class=<%= (index % 2 == 0) ? "even" : "odd"%>>
+      <%= gravatar_for user, size: 50 %>
+      <%= link_to user.name, user %>
+    </li>
+  <% end %>
+</ul>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.label :password_confirmation, "Confirm password" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-      <%= f.submit "Join #{ Rails.application.config.TITLE }", class: "btn btn-primary" %>
-
-    <% end %>
-  </div>
-</div>
+<%= will_paginate %>
