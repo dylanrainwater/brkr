@@ -41,10 +41,6 @@ $ rails server
 
 ## TODO
 
-* Implement cookie login
-
-* Flesh out Users
-
 * Account activation
 
 * Reset passwords
@@ -54,3 +50,7 @@ $ rails server
 * Follow
 
 * Feed
+
+* Restyle
+
+* Optimize for mobile
