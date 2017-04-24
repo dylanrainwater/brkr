@@ -56,4 +56,19 @@ class UserLoginTest < ActionDispatch::IntegrationTest
     # Verify that a profile link is also gone
     assert_select "a[href=?]", user_path(@user), count: 0
   end
+
+  # Tests use strings for cookies instead of symbols
+  test "login and remember" do
+    log_in_as(@user)
+    assert_not_empty cookies['remember_token']
+  end
+
+  test "login do not remember" do
+    # Should set cookie
+    log_in_as(@user)
+    # Should delete the cookie
+    log_in_as(@user, remember_me: '0')
+
+    assert_empty cookies['remember_token']
+  end
 end

@@ -136,7 +136,7 @@ aside {
       text-align: left;
       letter-spacing: -1px;
       margin-bottom: 3px;
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
 }
@@ -163,6 +163,30 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  span {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: left;
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
 
 #error_explanation {
