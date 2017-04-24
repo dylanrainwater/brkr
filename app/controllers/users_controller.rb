@@ -69,6 +69,10 @@ class UsersController < ApplicationController
     redirect_to(root_url) unless current_user.admin?
   end
 
+  def get_first_name
+    name.split[0]
+  end
+
   private
     def user_params
       params.require(:user).permit(:name, :email, :password,
