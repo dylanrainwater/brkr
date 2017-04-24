@@ -8,6 +8,11 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def update
+    current_user.update_attribute(:bio, params[:user][:bio])
+    redirect_to current_user
+  end
+
   def create
 
     @user = User.new(user_params)
